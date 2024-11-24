@@ -22,8 +22,8 @@ class TestID:
             )
 
         test_case.remove_animal(id_new_animal)
-        id_find_animal = test_case.find_animal(id_new_animal)['message']
+        message_find_animal = test_case.find_animal(id_new_animal)['message']
 
-        assert id_find_animal == "Pet not found", (
-            "[FAILED]: Animal was not removed"
+        assert message_find_animal == "Pet not found", (
+            f'[FAILED]: Animal with the id {id_new_animal} was not removed'
             )

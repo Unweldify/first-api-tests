@@ -52,7 +52,7 @@ class TestCase:
         Метод удаляет животное по id.
 
         :param animal_id: id животного
-        :return: id удаленного животного
+        :return: информация об успешности запроса удаления
         """
         url = f'/pet/{str(animal_id)}'
         self.response = self.request.send_request('delete', url)
